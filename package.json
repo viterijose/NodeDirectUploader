@@ -1,0 +1,24 @@
+{
+  "name": "nodedirectuploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viterijose/NodeDirectUploader.git"
+  },
+  "dependencies": {
+    "aws-sdk": "2.x",
+    "ejs": "2.x",
+    "express": "4.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viterijose/NodeDirectUploader/issues"
+  },
+  "homepage": "https://github.com/viterijose/NodeDirectUploader#readme"
+}
