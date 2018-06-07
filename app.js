@@ -37,13 +37,20 @@ app.get('/sign-s3', (req, res) => {
   const fileName = req.query['file-name'];
   const fileType = req.query['file-type'];
   const s3Params = {
-    Bucket: S3_BUCKET,
+    Bucket: "marvelian",
     Key: fileName,
     Expires: 60,
     ContentType: fileType,
     ACL: 'public-read'
   };
 
+  // s3.upload(s3Params, function(err, data) {
+  //   if (err) {
+  //     return alert('There was an error uploading your photo: ', err.message);
+  //   }
+  //   alert('Successfully uploaded photo.');
+  //   // viewAlbum(albumName);
+  // });
   s3.getSignedUrl('putObject', s3Params, (err, data) => {
     if(err){
       console.log(err);
@@ -57,12 +64,11 @@ app.get('/sign-s3', (req, res) => {
     res.end();
   });
 });
-
 /*
  * Respond to POST requests to /submit_form.
  * This function needs to be completed to handle the information in
  * a way that suits your application.
  */
-app.post('/save-details', (req, res) => {
-  // TODO: Read POSTed form data and do something useful
-});
+// app.post('/save-details', (req, res) => {
+//   // TODO: Read POSTed form data and do something useful
+// });
